@@ -19,7 +19,7 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Restore dependencies
+      - name: Restore dependency
         run: dotnet restore
 
       - name: Build project
