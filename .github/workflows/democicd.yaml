@@ -33,12 +33,12 @@ jobs:
       
       - name: publish project 🗞
         run: dotnet publish DemoWebAppSC/DemoWebAppSC.csproj -c Release -o ./publish
-
+       
       - name: SCP to EC2 Instance
         uses: appleboy/scp-action@master
         with:
-          host: '3.213.39.34'
-          username: 'ubuntu'
+          host: 3.213.39.34
+          username: ubuntu
           key: -----BEGIN RSA PRIVATE KEY-----
             MIIEpAIBAAKCAQEAzacdQpOl9Wv3ToulC27CZCOzX+CZYb75AzTS9fJWib9yCSFC
             eAbvGco/LeTUvH69JMRunH0OagwtdzObZVTgrxH8Q4emY6anQEarW7uoCPXMPS0u
@@ -69,3 +69,4 @@ jobs:
           port: 22
           source: './publish/'
           target: /usr/devscapps/pomodoro/
+
