@@ -23,7 +23,7 @@ jobs:
           
 
       - name: Restore dependency
-        run: dotnet restore
+        run: dotnet restore --project DemoWebAppSC
 
       - name: Build project
-        run: dotnet build -c Release --no-restore
+        run: dotnet build -c Release --no-restore --project DemoWebAppSC
