@@ -35,9 +35,9 @@ jobs:
         run: dotnet publish DemoWebAppSC/DemoWebAppSC.csproj -c Release -o ./publish
        
       - name: SCP to EC2 Instance
-        uses: appleboy/scp-action@master
+        uses: appleboy/scp-action
         with:
-          host: 3.213.39.34
+          host: 3.215.39.35
           username: ubuntu
           key: -----BEGIN RSA PRIVATE KEY-----
             MIIEpAIBAAKCAQEAzacdQpOl9Wv3ToulC27CZCOzX+CZYb75AzTS9fJWib9yCSFC
