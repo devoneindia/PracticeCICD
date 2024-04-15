@@ -11,22 +11,25 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: Print the build number
+      - name: Print the build number ✍🏻
         run: echo "Build number is Something"
 
-      - name: Print Current Working Directory
+      - name: Print Current Working Directory ☝🏻
         run: echo "PWD is" && pwd
 
-      - name: Checkout code
+      - name: Checkout code 📤
         uses: actions/checkout@v4
         
-      - name: Setup .NET
+      - name: Setup .NET ⚙
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.x'
       
-      - name: Dotnet Restore
+      - name: Dotnet Restore 🗒
         run: dotnet restore DemoWebAppSC/DemoWebAppSC.csproj
         
-      - name: Build project
+      - name: Build project 🏰
         run: dotnet build DemoWebAppSC/DemoWebAppSC.csproj
+      
+      - name: publish project 🗞
+        run: dotnet publish DemoWebAppSC/DemoWebAppSC.csproj -c Release -o ./publish
