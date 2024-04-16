@@ -21,7 +21,7 @@ jobs:
           host: 3.215.39.35
           username: ubuntu
           fingerprint: bd:1d:03:b2:11:0f:98:ed:41:95:36:76:d6:4e:bd:f1:97
-          key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNpx1Ck6X1a/dOi6ULbsJkI7Nf4JlhvvkDNNL18laJv3IJIUJ4Bu8Zyj8t5NS8fr0kxG6cfQ5qDC13M5tlVOCvEfxDh6ZjpqdARqtbu6gI9cw9LS6bygE0pHS+HCnaVk93Z/A1P+fyxvXGjjzE+Y+l41QL7kInbBP9lahm3W1XIb79pv/58AF3b6YCW3ZHoB1ef+S/ClVYjnwNbySEOgu+/lqRzF5zL+6UJafq0i0q1cer94vQhIWVl3WjY9NOcaX3HOjH5JQGfcwghT1L5fmm4SoXo3rNJXRLi9LtrvJDFrKe1BPxFrt7jVFN68Q6exeTJZzlg6Orl/MfDVRhGQyP ls-rywds-dev-01-keypair-01
+          key: 'DemoWebAppSC\key\ls-rywds-dev-01-keypair-01.pem'
           port: 22
           source: './publish/'
           target: /usr/devscapps/pomodoro/
