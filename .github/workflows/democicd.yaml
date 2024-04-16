@@ -52,5 +52,7 @@ jobs:
       - name: Copy files to EC2 instance
         run: scp -o StrictHostKeyChecking=no -r -i /home/runner/work/PracticeCICD/PracticeCICD/key/ls-rywds-dev-01-keypair-01.pem ./publish/* 'ubuntu@3.213.39.34:/usr/devscapps/pomodoro/$(date +"%Y%m%d%H%M")'
 
-
+      - name: Create a symlink as current
+        run: ln -s $(date +"%Y%m%d%H%M") current
+        
           
