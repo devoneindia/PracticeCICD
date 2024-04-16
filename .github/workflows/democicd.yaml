@@ -53,9 +53,9 @@ jobs:
         run: scp -o StrictHostKeyChecking=no -r -i /home/runner/work/PracticeCICD/PracticeCICD/key/ls-rywds-dev-01-keypair-01.pem ./publish/* 'ubuntu@3.213.39.34:/usr/devscapps/pomodoro/$(date +"%Y%m%d%H")'
   
       - name: Checking my working directory
-        run: pwd 
-        
+        run: pwd && ls ubuntu@3.213.39.34:/usr/devscapps/pomodoro/
+
       - name: Create a symlink as current
-        run: ln -s $(date +"%Y%m%d%H")/ current
+        run: ln -s 'ubuntu@3.213.39.34:/usr/devscapps/pomodoro/$(date +"%Y%m%d%H")' current
 
           
