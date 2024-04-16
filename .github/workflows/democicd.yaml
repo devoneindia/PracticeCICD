@@ -35,38 +35,15 @@ jobs:
         run: dotnet publish DemoWebAppSC/DemoWebAppSC.csproj -c Release -o ./publish
        
       - name: SCP to EC2 Instance
-        uses: appleboy/scp-action@v0.1.7
+        uses: nicklasfrahm/scp-action@main
         with:
+          direction:
           host: 3.215.39.35
           username: ubuntu
-          key: -----BEGIN RSA PRIVATE KEY-----
-            MIIEpAIBAAKCAQEAzacdQpOl9Wv3ToulC27CZCOzX+CZYb75AzTS9fJWib9yCSFC
-            eAbvGco/LeTUvH69JMRunH0OagwtdzObZVTgrxH8Q4emY6anQEarW7uoCPXMPS0u
-            m8oBNKR0vhwp2lZPd2fwNT/n8sb1xo48xPmPpeNUC+5CJ2wT/ZWoZt1tVyG+/ab/
-            +fABd2+mAlt2R6AdXn/kvwpVWI58DW8khDoLvv5akcxecy/ulCWn6tItKtXHq/eL
-            0ISFlZd1o2PTTnGl9xzox+SUBn3MIIU9S+X5puEqF6N6zSV0S4vS7a7yQxayntQT
-            8Ra7e41RTevEOnsXkyWc5YOjq5fzHw1UYRkMjwIDAQABAoIBAGeyemiVtrs3w64R
-            cBmBsfd4oPwZbn4BI+LgAfgOSGCQ7ll4MeH/7RSeDJmBp1uctJcTjYrO7DPBDDPt
-            C9BeqiTc9sy+W8InyHH6sHFDAIn0FxZJ8BSSGWWH/23VGa2Ek/FrsY3IOZcLh+ak
-            1jOkezB0nm6dpzHlp3bYvd+Qi4/BBhxL+e9jhG6skTUujqBx5vrZhoiGcCpoqmrF
-            mlDTiqpATnkx5bH0Wszei1iH7NOPKbynggyZZEeOg5ZDelP50PgBMGQD06MQAzy+
-            3fb5YUWK7h0K2sx9kLlVhwAIitSiA37f2X1CwO83e9dK7xaQ5H/nkIsrLhqZVcFF
-            4BWdPvECgYEA+lyWnOTo7/W5zrn9vr7hL0rGqkeeLjw56/Dmwxo6gOu3DJEVtNh9
-            D7tEP1rmf2uRPa/e8PZY0a84SvL225OFmJe0jvm1HFXmlHKR7GhmfUd78Syr1CmX
-            FH1SW4q3NIfk6nDIOPLF3hOl6JmweE2z3IW8Cy6X0GkXU6bNCsnoGxMCgYEA0kjD
-            /Iz7orH++LBQbMkWIdXOsRWydQlkCNtpxbdL8efQwgW7BlmQPI7nYyWIMxayrDIo
-            sn6bru9CRyURgTF2TzTIm/QcqTs22GNlCH0PR5Q2G+37K1C1lDqRpzAHSjuxA5c8
-            tCxoRixrwyJGvk1dfpEvP3wMPk5zyqFL4bHcXBUCgYEA42AzaUp8Q3JnzdgdG58/
-            5DOFOiDRCCyqbh3bdlXbzDpHhKI/lH8JFcB9uwxTSmXnAp83WqBhCg6YkXkXuVPB
-            gVRGJ5OhaJqbTza+UHaAnkbNybtIUudyzqkCoyDYQl0pCcJkFVRnX8l4ZEcwfhIT
-            x7OtlHo8ZosLJG3YynOU2QECgYBmuxfMPM/+Vrj6o6BW1RJT61Ez4Caz2KefUBnn
-            drnKb3bkIsqQupaljybpn/9e/hrB1ytcsE+8cbTObwSTOifTYDUVQ3fxETWlF0HX
-            mMkrLfQVRvkq2x4qUUaxB9y33luHJo6Icx1qEu9+gDNRaxhe6ezMNf0BP3CAMLaS
-            h0LhVQKBgQCydSSfgbPrI15CE1CU3/cjn9q68BQmsav5WT5P1zxRb0tezDwTscV2
-            vFUcTKBOVpsxMmMhsxZ6kfJkQrq+GT2CBiNKjSmJe5WEMJHyf2pPvQpbqksh6toc
-            DEKUi5/gstkV9vBOJRAYjfc/u0otcV4JVbrQPewlLKhmGUKWLhYR4g==
-            -----END RSA PRIVATE KEY-----
+          fingerprint: bd:1d:03:b2:11:0f:98:ed:41:95:36:76:d6:4e:bd:f1:97
+          key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNpx1Ck6X1a/dOi6ULbsJkI7Nf4JlhvvkDNNL18laJv3IJIUJ4Bu8Zyj8t5NS8fr0kxG6cfQ5qDC13M5tlVOCvEfxDh6ZjpqdARqtbu6gI9cw9LS6bygE0pHS+HCnaVk93Z/A1P+fyxvXGjjzE+Y+l41QL7kInbBP9lahm3W1XIb79pv/58AF3b6YCW3ZHoB1ef+S/ClVYjnwNbySEOgu+/lqRzF5zL+6UJafq0i0q1cer94vQhIWVl3WjY9NOcaX3HOjH5JQGfcwghT1L5fmm4SoXo3rNJXRLi9LtrvJDFrKe1BPxFrt7jVFN68Q6exeTJZzlg6Orl/MfDVRhGQyP ls-rywds-dev-01-keypair-01
           port: 22
           source: './publish/'
           target: /usr/devscapps/pomodoro/
 
+          
